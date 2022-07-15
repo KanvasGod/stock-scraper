@@ -1,0 +1,41 @@
+{
+    "NA": {
+        "Previous close": "$8.80",
+        "Day range": "$6.32 - $8.26",
+        "Year range": "$6.32 - $13.40",
+        "Avg Volume": "875.63K",
+        "P/E ratio": "-",
+        "Dividend yield": "-",
+        "Primary exchange": "NASDAQ"
+    },
+    "AZTA": {
+        "Previous close": "$74.16",
+        "Day range": "$60.81 - $65.54",
+        "Year range": "$60.81 - $124.79",
+        "Market cap": "4.63B USD",
+        "Avg Volume": "571.67K",
+        "P/E ratio": "2.08",
+        "Dividend yield": "0.65%",
+        "Primary exchange": "NASDAQ"
+    },
+    "GOSS": {
+        "Previous close": "$9.51",
+        "Day range": "$9.43 - $11.58",
+        "Year range": "$5.64 - $14.30",
+        "Market cap": "852.14M USD",
+        "Avg Volume": "1.03M",
+        "P/E ratio": "-",
+        "Dividend yield": "-",
+        "Primary exchange": "NASDAQ"
+    },
+    "SWVL": {
+        "Previous close": "$3.80",
+        "Day range": "$3.15 - $3.90",
+        "Year range": "$3.15 - $11.40",
+        "Market cap": "380.43M USD",
+        "Avg Volume": "163.54K",
+        "P/E ratio": "-",
+        "Dividend yield": "-",
+        "Primary exchange": "NASDAQ"
+    }
+}
