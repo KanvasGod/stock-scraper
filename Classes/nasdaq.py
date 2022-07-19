@@ -1,5 +1,6 @@
 from ast import Try
 from Functions import get_stock_data
+from datetime import datetime, timedelta
 import os
 import json
 
@@ -22,17 +23,39 @@ class Stocks(object):
     def update_all(self):
         # void function
         # Update all items in Store.
+        current_time = datetime.now()
+        future_date = None
         try:
-            with open('store/stocks.json', 'r') as latest_file:
-                stockData = json.load(latest_file)
-                # get all stocks in store
-                stocks = stockData.key()
-                stocksUpdate = get_stock_data.output(stocks)
-                for ticker in stocks:
-                    stockData[ticker] = stocksUpdate[ticker]
-                # save back to store
-                f = open('store/stocks.json', 'w')
-                f.write(json.dumps(stocksUpdate, indent=4))
+            date = open('store/update_timer.json', 'r')
+            read = json.loads(date.read())
+            future_date = datetime.fromisoformat(read["future_date"])
+        except Exception as e:
+            print("future_date failed to post",e)
+        
+        try:
+            
+            if(future_date and future_date < current_time):
+                with open('store/stocks.json', 'r') as latest_file:
+                    stockData = json.load(latest_file)
+                    # get all stocks in store
+                    stocks = stockData.keys()
+                    stocksUpdate = get_stock_data.output(stocks)
+                    for ticker in stocks:
+                        stockData[ticker] = stocksUpdate[ticker]
+                    # save back to store
+                    f = open('store/stocks.json', 'w')
+                    f.write(json.dumps(stocksUpdate, indent=4))
+                    f.close()
+                    
+
+            if(future_date == None or  future_date < current_time):
+                # create new update timer
+                new_date = timedelta(days= 1)
+                future_date = current_time + new_date
+                f = open('store/update_timer.json', 'w')
+                f.write(json.dumps({
+                    "future_date": future_date.__str__()
+                }, indent=4))
                 f.close()
 
         except Exception as e:

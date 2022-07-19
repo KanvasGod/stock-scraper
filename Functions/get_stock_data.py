@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import json
 
 def output(array):
     # website to scrape
@@ -9,6 +8,8 @@ def output(array):
     shipData = {}
     # rawdata is used to store webpage data
     rawData = {}
+    # stock exchanges
+    exchanges = ['NASDAQ', 'NYSE']
 
     for x in array:
         # scrape webpage and return data if available
