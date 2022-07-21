@@ -1,51 +1,61 @@
 {
     "NA": {
-        "Previous close": "$6.80",
-        "Day range": "$6.30 - $8.49",
+        "Previous close": "$7.30",
+        "Day range": "$6.33 - $8.30",
         "Year range": "$6.30 - $13.40",
-        "Avg Volume": "483.09K",
+        "Avg Volume": "340.17K",
         "P/E ratio": "-",
         "Dividend yield": "-",
         "Primary exchange": "NASDAQ"
     },
     "AZTA": {
-        "Previous close": "$65.87",
-        "Day range": "$62.51 - $67.53",
+        "Previous close": "$64.66",
+        "Day range": "$64.24 - $68.13",
         "Year range": "$60.81 - $124.79",
-        "Market cap": "4.71B USD",
-        "Avg Volume": "669.98K",
-        "P/E ratio": "2.12",
-        "Dividend yield": "0.64%",
+        "Market cap": "5.08B USD",
+        "Avg Volume": "692.05K",
+        "P/E ratio": "2.28",
+        "Dividend yield": "0.59%",
         "Primary exchange": "NASDAQ"
     },
     "GOSS": {
-        "Previous close": "$11.08",
-        "Day range": "$11.23 - $12.30",
+        "Previous close": "$11.99",
+        "Day range": "$11.92 - $12.45",
         "Year range": "$5.64 - $14.30",
-        "Market cap": "869.88M USD",
-        "Avg Volume": "1.55M",
+        "Market cap": "925.40M USD",
+        "Avg Volume": "1.76M",
         "P/E ratio": "-",
         "Dividend yield": "-",
         "Primary exchange": "NASDAQ"
     },
     "SWVL": {
-        "Previous close": "$2.31",
-        "Day range": "$2.13 - $2.79",
-        "Year range": "$2.13 - $11.40",
-        "Market cap": "257.98M USD",
-        "Avg Volume": "215.66K",
+        "Previous close": "$1.99",
+        "Day range": "$1.84 - $2.23",
+        "Year range": "$1.78 - $11.40",
+        "Market cap": "225.88M USD",
+        "Avg Volume": "297.27K",
         "P/E ratio": "-",
         "Dividend yield": "-",
         "Primary exchange": "NASDAQ"
     },
     "LHDX": {
-        "Previous close": "$2.57",
-        "Day range": "$2.57 - $3.04",
+        "Previous close": "$2.99",
+        "Day range": "$2.90 - $3.07",
         "Year range": "$1.36 - $11.10",
         "Market cap": "120.00M USD",
-        "Avg Volume": "71.76K",
+        "Avg Volume": "72.79K",
         "P/E ratio": "-",
         "Dividend yield": "-",
         "Primary exchange": "NASDAQ"
+    },
+    "SJR": {
+        "Previous close": "$26.98",
+        "Day range": "$26.70 - $27.14",
+        "Year range": "$25.63 - $31.60",
+        "Market cap": "13.43B USD",
+        "Avg Volume": "501.94K",
+        "P/E ratio": "20.56",
+        "Dividend yield": "3.36%",
+        "CDP Climate Change Score": "D"
     }
 }

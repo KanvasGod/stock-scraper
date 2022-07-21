@@ -1,4 +1,4 @@
-
+from Functions import get_stock_data
 from urllib import request
 from flask import Flask, request
 from Classes import nasdaq
