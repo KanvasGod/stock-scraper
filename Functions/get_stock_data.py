@@ -13,7 +13,6 @@ def output(array):
 
     for x in array:
         # scrape webpage and return data if available
-        confirmedData = None
         for index in exchanges:
             newUrl = f"{url}{x.upper()}:{index}"
             try:
