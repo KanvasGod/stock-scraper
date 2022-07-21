@@ -1,4 +1,4 @@
-
+from Functions import get_stock_data
 from urllib import request
 from flask import Flask, request
 from Classes import nasdaq
@@ -12,6 +12,7 @@ os.system('clear')
 @app.route("/python_stocks/all", methods=['GET'])
 def getStocks():
     data_obj = nasdaq.Stocks()
+    data_obj.update_all()
     # fetch all stocks in store
     return data_obj.fetch_all()
 
@@ -19,6 +20,7 @@ def getStocks():
 def getListOfStocks():
     # call webscaper function
     data_obj = nasdaq.Stocks()
+    data_obj.update_all()
     # check for body of request to be properly formatted
     content_type = request.headers.get('Content-Type')
     if(content_type == 'application/json'):
@@ -29,7 +31,6 @@ def getListOfStocks():
         return 'Data not of type List', 400
     else:
         return 'Content type Error, must be of type json', 417
-
 
 if __name__ == '__main__':
     app.run()
