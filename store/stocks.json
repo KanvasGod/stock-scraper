@@ -57,5 +57,16 @@
         "P/E ratio": "20.56",
         "Dividend yield": "3.36%",
         "CDP Climate Change Score": "D"
+    },
+    "F": {
+        "Previous close": "$12.59",
+        "Day range": "$12.51 - $12.82",
+        "Year range": "$10.61 - $25.87",
+        "Market cap": "51.17B USD",
+        "Avg Volume": "56.65M",
+        "P/E ratio": "4.47",
+        "Dividend yield": "3.14%",
+        "Primary exchange": "NYSE",
+        "CDP Climate Change Score": "A"
     }
 }
