@@ -1,7 +1,7 @@
 from Functions import get_stock_data
 from dotenv import load_dotenv, find_dotenv
 from urllib import request
-from flask import Flask, request
+from flask import Flask, request, render_template
 from Classes import nasdaq
 import os
 
@@ -55,6 +55,12 @@ def getListOfStocks():
 
     else:
         return "unauthorized", 401
+
+@app.errorhandler(404)
+def handle_404(e):
+    # handle all other routes here
+    return render_template("index.html"), 404
+
 
 if __name__ == '__main__':
     app.run()
