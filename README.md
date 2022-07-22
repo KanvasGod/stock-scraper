@@ -23,7 +23,7 @@ API does require a x-api-key in order to get data (open use keys coming soon)
 > I have many ideas on how to make this project even better, like expanding the sites it pulls data from. To adding more exchanges and adding open api keys for free use for anyone in need.
 
 # Useful Links
-![Google Finance](https://www.google.com/finance)
+[Google Finance](https://www.google.com/finance)
 
 # License
 Stock Scraper is licensed under the MIT license
