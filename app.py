@@ -1,15 +1,19 @@
-from Functions import get_stock_data
-from dotenv import load_dotenv, find_dotenv
+from asyncio import proactor_events
+from dotenv import load_dotenv
 from urllib import request
 from flask import Flask, request, render_template
-from Classes import nasdaq
+from Classes import stock_look_up
 import os
 
 # create application instance from flask import
 import json
 app = Flask(__name__)
-load_dotenv(find_dotenv())
+project_folder = os.getcwd()
+load_dotenv(os.path.join(project_folder, '.env'))
+
 os.system('clear')
+
+apiKey = os.environ.get('API_KEY')
 
 @app.route("/python_stocks/all", methods=['GET'])
 def getStocks():
@@ -18,10 +22,8 @@ def getStocks():
     except Exception as e:
         return "Incorrect API Headers", 401
 
-    apiKey = os.environ.get('API_KEY')
-
     if auth == apiKey:
-        data_obj = nasdaq.Stocks()
+        data_obj = stock_look_up.Stocks()
         data_obj.update_all()
         # fetch all stocks in store
         return data_obj.fetch_all()
@@ -31,16 +33,14 @@ def getStocks():
 @app.route("/python_stocks/search", methods=['PUT'])
 def getListOfStocks():
 
-    try: 
-        auth = request.headers.get("X-Api-Key")
+    try:
+        auth = request.headers.get("x-api-key")
     except Exception as e:
         return "Incorrect API Headers", 401
 
-    apiKey = os.environ.get('API_KEY')
-
     if auth == apiKey:
         # call webscaper function
-        data_obj = nasdaq.Stocks()
+        data_obj = stock_look_up.Stocks()
         data_obj.update_all()
         # check for body of request to be properly formatted
         content_type = request.headers.get('Content-Type')
