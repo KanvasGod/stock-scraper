@@ -5,12 +5,12 @@ A usful tool for getting stock data, that other wise would'nt be easy to get in 
 
 # API Usage
 
-```curl
-GET  http://127.0.0.1:5000/python_stocks/all
+```http
+GET  https://kanvasgod.pythonanywhere.com/python_stocks/all
 ```
 
 ```curl
-PUT  http://127.0.0.1:5000/python_stocks/search
+PUT  https://kanvasgod.pythonanywhere.com/python_stocks/search
   Content-Type: application/json
   {
       "stock": ["SJR"]
