@@ -1,4 +1,3 @@
-from asyncio import proactor_events
 from dotenv import load_dotenv
 from urllib import request
 from flask import Flask, request, render_template
@@ -7,8 +6,9 @@ import os
 
 # create application instance from flask import
 import json
-app = Flask(__name__)
+
 project_folder = os.getcwd()
+app = Flask(__name__)
 load_dotenv(os.path.join(project_folder, '.env'))
 
 os.system('clear')
@@ -59,8 +59,7 @@ def getListOfStocks():
 @app.errorhandler(404)
 def handle_404(e):
     # handle all other routes here
-    return render_template("index.html"), 404
-
+    return render_template('error.html')
 
 if __name__ == '__main__':
     app.run()
