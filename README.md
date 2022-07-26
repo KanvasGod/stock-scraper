@@ -9,7 +9,7 @@ A usful tool for getting stock data, that other wise would'nt be easy to get in 
 GET  https://kanvasgod.pythonanywhere.com/python_stocks/all
 ```
 
-```curl
+```http
 PUT  https://kanvasgod.pythonanywhere.com/python_stocks/search
   Content-Type: application/json
   {
